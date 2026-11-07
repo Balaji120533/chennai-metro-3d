@@ -27,6 +27,8 @@ jobs:
       # optional WebAssembly helpers differently and rejects the lock file).
       - run: npm install -g npm@11.6.2
       - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
       - run: npm test
       - name: Static export
         # Project pages are served from /<repository-name>/
